@@ -1,5 +1,6 @@
-# Python
-A collection of various algorithms under ML coded in Python.
+# Price Tracker 
+The Price Tracker is a web application that allows users to track the price of products from different online stores. Users can input the URL of the product they are interested in, set a target price, and get notifications when the product price drops below the target. This project was built using Python and Flask and is designed to help users save money by monitoring prices automatically.
+
 ## Python Libraries:
 1. bs4 (BeautifulSoup4): bs4 (BeautifulSoup4) is a Python library used for parsing HTML and XML documents. It creates a parse tree from page source code, which can be used to extract data from web pages in a structured way.
 
