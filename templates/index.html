@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Price Tracker</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Price Tracker</h1>
+        <form id="priceTrackerForm" action="/track_price" method="POST">
+            <label for="product_url">Product URL:<span class="required">*</span></label>
+            <input type="url" id="product_url" name="product_url" required placeholder="Enter the product URL">
+            
+            <label for="target_price">Target Price (rs):<span class="required">*</span></label>
+            <input type="number" id="target_price" name="target_price" required step="0.01" placeholder="Enter target price">
+
+            <button type="submit" id="trackPriceButton" disabled>Track Price</button>
+        </form>
+
+        {% if price %}
+        <p>Current Price: rs{{ price }}</p>
+        {% endif %}
+
+        {% if alert %}
+        <p class="alert">{{ alert }}</p>
+        {% endif %}
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
